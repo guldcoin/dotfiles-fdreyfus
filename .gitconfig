@@ -1,0 +1,29 @@
+[user]
+  email = fdreyfus@gmail.com
+  name = Fernando Dreyfus
+  username = fdreyfus
+  signingkey = 7E54323C4A12BF6A259F2B86FA628EB5210F4427
+  location = Panama
+  website = fernandodreyfus.com
+[commit]
+  gpgsign = true
+[core]
+  autocrlf = true
+[filter "lfs"]
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
+[aliases]
+  keybase = fdreyfus
+  reddit = fdreyfus-guld
+  github = ferdreyfus
+  bitbucket = ferdreyfus
+  gitlab = ferdreyfus
+  npm = fdreyfus
+  twitter = tuyelblockchain
+  instagram = fdreyfus
+[alias]
+  pushall = !git remote | xargs -L1 -I R git push R $2
+[merge "ours"]
+  driver = true
